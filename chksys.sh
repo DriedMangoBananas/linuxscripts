@@ -4,7 +4,7 @@
 
 clear
 
-echo $'\n'$"Linux Version"
+echo $'\n'$"Version:"
 uname -srvo 
 
 echo $'\n'$"Memory Usage:"
@@ -15,5 +15,8 @@ echo $'\n'$"Disk Usage:"
 
 echo $'\n'$"Uptime:"
 /usr/bin/uptime
+
+echo $'\n'$"Power:"
+acpi -bat
 
 exit
