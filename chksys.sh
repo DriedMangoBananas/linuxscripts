@@ -4,11 +4,10 @@
 
 clear
 
-echo "Linux Version"
-uname -a 
-echo "        "
+echo $'\n'$"Linux Version"
+uname -srvo 
 
-echo "Memory Usage:"
+echo $'\n'$"Memory Usage:"
 /usr/bin/free -h
 
 echo $'\n'$"Disk Usage:"
