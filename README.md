@@ -1,7 +1,7 @@
 # linuxscripts
  My linux scripts/ config files
 
-For shell scripts, first chmod +x and move to /bin to use as standalone terminal commands.
+For shell scripts, first chmod +x and move to /bin to use as standalone commands.
 
 sysinfo: Memory, IPs and system temp all in the same place at last.
 
