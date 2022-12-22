@@ -8,3 +8,5 @@ sshvpn: A workable attempt to use vpn over ssh using sshuttle and my VPS to bypa
 scandump2. Information About a Host and Network and Dump to file
 
 .vimrc: Backup.
+
+wifiscanloop: Poor man's wireless signal strength scanner
