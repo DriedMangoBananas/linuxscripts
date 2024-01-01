@@ -6,7 +6,7 @@ echo "===== Network Diagnosis ====="
 
 # Check Internet connectivity
 echo -e "\n[1] Checking Internet connectivity..."
-ping -c 4 www.google.com
+ping -c 4 8.8.8.8
 if [ $? -eq 0 ]; then
     echo "Internet is reachable."
 else
@@ -15,7 +15,7 @@ fi
 
 # Check DNS resolution
 echo -e "\n[2] Checking DNS resolution..."
-ping -c 4 8.8.8.8
+ping -c 4 google.com
 if [ $? -eq 0 ]; then
     echo "DNS is resolving."
 else
@@ -54,22 +54,17 @@ fi
 
 echo 
 
-# Check if a VPN process is running
-vpn_processes=("openvpn" "strongswan" "ikev2" "openconnect" "wireguard" "tinc")
-
 # Check if any VPN processes are running
+vpn_processes=("openvpn" "strongswan" "ikev2" "openconnect" "wireguard" "tinc")
+echo -e "\n[6] Checking if $vpn_processes is running..."
+
 for process in "${vpn_processes[@]}"; do
     if pgrep -x "$process" > /dev/null; then
         echo "VPN ($process) is running."
-        exit 0
     fi
 done
 
 echo
-echo "No VPN processes found."
-
-sleep 1 
-echo 
 
 echo -e "\n===== End of Network Diagnosis ====="
 echo
